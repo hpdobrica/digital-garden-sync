@@ -5,6 +5,7 @@ check_for_conflicts () {
 
    if [ $? -eq 0 ] ; then
      echo "<<<<<<< found, there are likely git clonflicts, exiting"
+     termux-notification -c "obsidian sync failed, check git conflicts!"
      exit 1
    fi
 }
