@@ -35,4 +35,11 @@ git pull --rebase origin main
 check_for_conflicts
 git push
 
+if [ -z "$(git status --porcelain)" ]; then
+  echo "working directory clean, all good!"
+else
+  termux-notification -c "obsidian sync finished, but working directory is not clean - something might be wrong"
+
+fi
+
 cd $TPWD
