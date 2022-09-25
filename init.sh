@@ -11,7 +11,7 @@ cd /data/data/com.termux/files/home/storage/shared/dev/github.com/hpdobrica
 
 if [ -d "$REPO_DIR" ]; then
   echo "dir $REPO_DIR exists at $PWD, remove it first"
-  cs $TPWD
+  cd $TPWD
   exit 0
 fi
 
